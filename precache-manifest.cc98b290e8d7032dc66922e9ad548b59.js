@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "c6e116062a118d1a836ff773a341c266",
+    "revision": "1e1a012e3c0ad6224ca3edf7819675c2",
     "url": "/pennyshop/index.html"
   },
   {
-    "revision": "893e52b56c1d7db18f53",
+    "revision": "7d65655a8f58129e6f03",
     "url": "/pennyshop/static/css/main.65d2b46a.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/pennyshop/static/js/2.7ad562c5.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "893e52b56c1d7db18f53",
-    "url": "/pennyshop/static/js/main.c4eb4be0.chunk.js"
+    "revision": "7d65655a8f58129e6f03",
+    "url": "/pennyshop/static/js/main.3cd07e1a.chunk.js"
   },
   {
     "revision": "42d288d592f02f9c9462",
