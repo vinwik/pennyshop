@@ -2,7 +2,7 @@ export const storeProducts = [
   {
     id: 1,
     title: `Darth Vader 22"`,
-    img: "../assets/vader-22.jpg",
+    img: "./assets/vader-22.jpg",
     size: `22"`,
     price: 89.99,
     category: "Star Wars",
@@ -50,7 +50,7 @@ export const storeProducts = [
   {
     id: 5,
     title: `Darth Vader 22"`,
-    img: "../assets/vader-22.jpg",
+    img: "./assets/vader-22.jpg",
     size: `22"`,
     price: 89.99,
     category: "Star Wars",
@@ -100,7 +100,7 @@ export const storeProducts = [
 export const detailProduct = {
   id: 1,
   title: `Darth Vader 22"`,
-  img: "../assets/vader-22.jpg",
+  img: "./assets/vader-22.jpg",
   size: `22"`,
   price: 89.99,
   category: "Star Wars",

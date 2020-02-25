@@ -1,6 +1,10 @@
 {
   "name": "pennyshop",
+<<<<<<< HEAD
   "homepage": "https://vinwik.github.io/pennyshop",
+=======
+  "homepage": "http://vinwik.github.io/pennyshop",
+>>>>>>> tempbranch
   "version": "0.1.0",
   "private": true,
   "dependencies": {
