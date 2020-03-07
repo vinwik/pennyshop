@@ -72,6 +72,10 @@ svg path {
   fill: var(--main-color);
 }
 
+section {
+  margin-top: 100px;
+}
+
 /*--- GLOBAL CLASSES ---*/
 
 .container {
@@ -122,11 +126,11 @@ body {
 
 /*--- NAVBAR ---*/
 .navbar {
-  // position: fixed; //not sure!
-  // top: 0;
-  // width: 100%;
+  position: fixed;
+  top: 0;
+  width: 100%;
   z-index: 10;
-  min-height: 12vh;
+  height: 100px;
   background-color: var(--main-bg-color);
   border-bottom: 1px solid var(--secondary-color);
   box-shadow: 0 0 10px var(--secondary-color);
@@ -134,7 +138,7 @@ body {
   grid-template-columns: 1fr 2fr 1fr;
   padding: 0 5%;
   align-items: center;
-  font-weight: 600;
+  font-weight: 700;
   text-transform: uppercase;
 
   .navbar__brand {
@@ -181,7 +185,9 @@ body {
 
 /*--- TITLE ---*/
 .title {
-  margin: 2em 0;
+  margin-top: 1em;
+  padding-bottom: 2em;
+  text-transform: uppercase;
 }
 
 /*--- PRODUCT LIST ---*/
@@ -222,6 +228,7 @@ body {
 .details {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  margin-top: 100px;
 
   .details__img {
     width: 100%;
@@ -343,6 +350,67 @@ body {
   }
 }
 
+/*--- SECTION PAGES ---*/
+
+section {
+  header {
+    height: 60vh;
+    @include flex-row();
+    justify-content: center;
+    color: var(--main-bg-color);
+    font-size: 2em;
+    text-shadow: 0 0 10px var(--main-color);
+  }
+  article {
+    height: 50vh;
+    margin: 4em 4em 20vh 4em;
+    position: relative;
+  }
+
+  .inner-article {
+    background-color: var(--main-bg-color);
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    & > * {
+      margin: 1em;
+    }
+  }
+}
+
+/*--- SKATEBOARD PAGE ---*/
+
+.skateboards {
+  .skateboards__header {
+    background: url(./assets/skateboards.jpg) no-repeat center/cover;
+  }
+
+  .penny {
+    background: url(./assets/showcase-22.jpg) no-repeat center/cover;
+  }
+
+  .nickel {
+    background: url(./assets/showcase-27.jpg) no-repeat bottom/cover;
+  }
+}
+
+/*--- COLLECTIONS PAGE ---*/
+
+.collections {
+  .collections__header {
+    background: url(./assets/collections.jpg) no-repeat center/cover;
+  }
+
+  .classic {
+    background: url(./assets/classic.jpg) no-repeat bottom/cover;
+  }
+
+  .star-wars {
+    background: url(./assets/star-wars.jpg) no-repeat bottom/cover;
+  }
+}
+
 /*--- 404 PAGE---*/
 
 .default {
@@ -376,8 +444,12 @@ body {
     font-size: 15px;
   }
 
+  section {
+    margin-top: 60px;
+  }
+
   .navbar {
-    min-height: 8vh;
+    height: 60px;
     .navbar__brand {
       grid-column: 2/3;
       margin: 0 auto;
@@ -390,6 +462,11 @@ body {
     .navbar__nav {
       display: none;
     }
+  }
+
+  .title {
+    margin-top: 0;
+    padding-bottom: 1em;
   }
 
   .product {
@@ -410,6 +487,16 @@ body {
       grid-row: 3/4;
       height: 40vh;
       margin-bottom: 2em;
+    }
+  }
+
+  section {
+    article {
+      margin: 2em 1em 15vh 1em;
+    }
+
+    .inner-article {
+      width: 60%;
     }
   }
 }
@@ -477,6 +564,32 @@ body {
       grid-row: 3/4;
       height: 40vh;
       margin-bottom: 2em;
+    }
+  }
+
+  section {
+    article {
+      margin: 0 0 calc(25vh + 2em) 0;
+    }
+
+    .inner-article {
+      background-color: var(--main-bg-color);
+      width: 100%;
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translate(-50%, 100%);
+      & > * {
+        margin: 1em;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 900px) and (orientation: portrait) {
+  section {
+    article {
+      margin: 4em 4em 15vh 4em;
     }
   }
 }

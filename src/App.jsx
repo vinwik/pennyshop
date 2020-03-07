@@ -6,6 +6,8 @@ import ProductList from "./components/ProductList";
 import Details from "./components/Details";
 import Cart from "./components/Cart/Cart";
 import Default from "./components/Default";
+import Skateboards from "./components/Skateboards";
+import Collections from "./components/Collections";
 
 // import "./App.css";
 
@@ -16,6 +18,8 @@ class App extends Component {
         <NavBar />
         <Switch>
           <Route exact path="/" component={ProductList} />
+          <Route exact path="/skateboards" component={Skateboards} />
+          <Route exact path="/collections" component={Collections} />
           <Route path="/details" component={Details} />
           <Route path="/cart" component={Cart} />
           <Route component={Default} />

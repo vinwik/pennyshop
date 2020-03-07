@@ -7,18 +7,20 @@ import Product from "./Product";
 class ProductList extends Component {
   render() {
     return (
-      <div className="container">
-        <Title title="Skateboards" />
-        <div className="product">
-          <ProductConsumer>
-            {value => {
-              return value.products.map(product => {
-                return <Product key={product.id} product={product} />;
-              });
-            }}
-          </ProductConsumer>
+      <section>
+        <div className="container">
+          <Title title="Shop" />
+          <div className="product">
+            <ProductConsumer>
+              {value => {
+                return value.products.map(product => {
+                  return <Product key={product.id} product={product} />;
+                });
+              }}
+            </ProductConsumer>
+          </div>
         </div>
-      </div>
+      </section>
     );
   }
 }

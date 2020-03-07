@@ -16,13 +16,18 @@ class NavBar extends Component {
         </Link>
         <ul className="navbar__nav">
           <li className="navbar__nav-items">
-            <Link to="/" className="navbar__nav-links">
+            <Link to="/skateboards" className="navbar__nav-links">
               Skateboards
             </Link>
           </li>
           <li className="navbar__nav-items">
-            <Link to="/" className="navbar__nav-links">
+            <Link to="/collections" className="navbar__nav-links">
               Collections
+            </Link>
+          </li>
+          <li className="navbar__nav-items">
+            <Link to="/" className="navbar__nav-links">
+              Shop
             </Link>
           </li>
         </ul>
