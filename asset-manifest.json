@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/pennyshop/static/css/main.4d368483.chunk.css",
-    "main.js": "/pennyshop/static/js/main.f0e7cd1c.chunk.js",
-    "main.js.map": "/pennyshop/static/js/main.f0e7cd1c.chunk.js.map",
+    "main.js": "/pennyshop/static/js/main.6944b10f.chunk.js",
+    "main.js.map": "/pennyshop/static/js/main.6944b10f.chunk.js.map",
     "runtime-main.js": "/pennyshop/static/js/runtime-main.847ade5e.js",
     "runtime-main.js.map": "/pennyshop/static/js/runtime-main.847ade5e.js.map",
     "static/js/2.c7ed2193.chunk.js": "/pennyshop/static/js/2.c7ed2193.chunk.js",
     "static/js/2.c7ed2193.chunk.js.map": "/pennyshop/static/js/2.c7ed2193.chunk.js.map",
     "index.html": "/pennyshop/index.html",
-    "precache-manifest.62fa8a8e9b019144f433ad66b6dea07e.js": "/pennyshop/precache-manifest.62fa8a8e9b019144f433ad66b6dea07e.js",
+    "precache-manifest.864abeedd2151a45d4ad15d9cfe256b8.js": "/pennyshop/precache-manifest.864abeedd2151a45d4ad15d9cfe256b8.js",
     "service-worker.js": "/pennyshop/service-worker.js",
     "static/css/main.4d368483.chunk.css.map": "/pennyshop/static/css/main.4d368483.chunk.css.map",
     "static/js/2.c7ed2193.chunk.js.LICENSE.txt": "/pennyshop/static/js/2.c7ed2193.chunk.js.LICENSE.txt",
@@ -23,6 +23,6 @@
     "static/js/runtime-main.847ade5e.js",
     "static/js/2.c7ed2193.chunk.js",
     "static/css/main.4d368483.chunk.css",
-    "static/js/main.f0e7cd1c.chunk.js"
+    "static/js/main.6944b10f.chunk.js"
   ]
 }
