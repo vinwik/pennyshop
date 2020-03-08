@@ -4,13 +4,17 @@ import { Link } from "react-router-dom";
 
 function CartTotal({ value }) {
   const { cart, cartTotal } = value;
-  console.log(cart.count);
+  const count = cart.reduce((total, cart) => {
+    return total + cart.count;
+  }, 0);
   return (
     <aside className="cart-total">
       <h4 className="cart-total__title">Order Summary</h4>
       <div className="cart-total__item">
         <h4 className="cart-total__quantity">
-          {cart.length} {cart.length > 1 ? "items" : "item"}
+          <span>{count}</span>
+          <span> </span>
+          <span>{count > 1 ? "items" : "item"}</span>
         </h4>
         <h4 className="item__subtotal">£{cartTotal.toFixed(2)}</h4>
       </div>
