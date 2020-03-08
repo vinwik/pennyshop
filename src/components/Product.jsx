@@ -17,7 +17,7 @@ export class Product extends Component {
             >
               <Link
                 to={{
-                  pathname: `/${id}`,
+                  pathname: `/shop/${id}`,
                   state: { products: id }
                 }}
               >
