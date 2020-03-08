@@ -13,9 +13,15 @@ class ProductList extends Component {
           <div className="product">
             <ProductConsumer>
               {value => {
-                return value.products.map(product => {
-                  return <Product key={product.id} product={product} />;
-                });
+                if (value.filteredList.length) {
+                  return value.filteredList.map(product => {
+                    return <Product key={product.id} product={product} />;
+                  });
+                } else {
+                  return value.products.map(product => {
+                    return <Product key={product.id} product={product} />;
+                  });
+                }
               }}
             </ProductConsumer>
           </div>

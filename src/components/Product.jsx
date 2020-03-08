@@ -7,6 +7,8 @@ import { ReactComponent as ShoppingCart } from "../assets/shopping-cart.svg";
 export class Product extends Component {
   render() {
     const { id, title, img, price, inCart } = this.props.product;
+    console.log(this.props.product);
+
     return (
       <ProductConsumer>
         {value => (
@@ -15,7 +17,12 @@ export class Product extends Component {
               className="card__img-container"
               onClick={() => value.handleDetail(id)}
             >
-              <Link to="/details">
+              <Link
+                to={{
+                  pathname: `/${id}`,
+                  state: { products: id }
+                }}
+              >
                 <img src={img} alt={title} className="card__img" />
               </Link>
               <h4 className="card__title">

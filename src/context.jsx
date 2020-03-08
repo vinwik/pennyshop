@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 import { storeProducts, detailProduct } from "./data";
+import Collections from "./components/Collections";
 
-const ProductContext = React.createContext();
+export const ProductContext = React.createContext();
 //PROVIDER
 //CONSUMER
 
@@ -9,6 +10,7 @@ class ProductProvider extends Component {
   state = {
     products: [],
     detailProduct: detailProduct,
+    filteredList: [],
     cart: [],
     cartTotal: 0
   };
@@ -37,6 +39,24 @@ class ProductProvider extends Component {
     const product = this.getItem(id);
     this.setState(() => {
       return { detailProduct: product };
+    });
+  };
+
+  getTags = tags => {
+    const tag = this.state.products.filter(
+      product => product.tags.indexOf(tags) >= 0
+    );
+    console.log(tag);
+
+    return tag;
+  };
+
+  handleTags = tags => {
+    const tag = this.getTags(tags);
+    console.log(tag);
+
+    this.setState(() => {
+      return { filteredList: tag };
     });
   };
 
@@ -134,12 +154,12 @@ class ProductProvider extends Component {
   };
 
   render() {
-    // console.log(this.state.products);
     return (
       <ProductContext.Provider
         value={{
           ...this.state,
           handleDetail: this.handleDetail,
+          handleTags: this.handleTags,
           addToCart: this.addToCart,
           decrement: this.decrement,
           increment: this.increment,
