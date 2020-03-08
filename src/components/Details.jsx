@@ -13,7 +13,7 @@ export class Details extends Component {
             id,
             img,
             title,
-            category,
+            collection,
             price,
             info,
             inCart
@@ -25,7 +25,7 @@ export class Details extends Component {
                 <h2 className="details__text-title">{title}</h2>
                 <p className="details__text-category">
                   <strong>Collection : </strong>
-                  {category}
+                  {collection}
                 </p>
                 <h3 className="details__text-price">£{price}</h3>
                 <button
