@@ -7,8 +7,6 @@ import { ReactComponent as ShoppingCart } from "../assets/shopping-cart.svg";
 export class Product extends Component {
   render() {
     const { id, title, img, price, inCart } = this.props.product;
-    console.log(this.props.product);
-
     return (
       <ProductConsumer>
         {value => (

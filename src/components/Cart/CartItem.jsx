@@ -5,7 +5,6 @@ import { ReactComponent as Minus } from "../../assets/minus-square.svg";
 
 function CartItem({ item, value }) {
   const { id, title, img, price, total, count } = item;
-  console.log(item);
   const { increment, decrement, removeItem } = value;
   return (
     <div className="cart-item">

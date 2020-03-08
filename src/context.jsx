@@ -46,14 +46,11 @@ class ProductProvider extends Component {
     const tag = this.state.products.filter(
       product => product.tags.indexOf(tags) >= 0
     );
-    console.log(tag);
-
     return tag;
   };
 
   handleTags = tags => {
     const tag = this.getTags(tags);
-    console.log(tag);
 
     this.setState(() => {
       return { filteredList: tag };
