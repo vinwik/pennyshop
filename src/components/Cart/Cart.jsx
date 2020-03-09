@@ -20,7 +20,7 @@ export class Cart extends Component {
                 <div className="cart__row">
                   <CartColumns />
                   <CartList value={value} />
-                  <CartTotal value={value} />
+                  <CartTotal value={value} history={this.props.history} />
                 </div>
               );
             } else {

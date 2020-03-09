@@ -1,9 +1,10 @@
 import React from "react";
+import CheckoutButton from "./CheckoutButton";
 
 import { Link } from "react-router-dom";
 
-function CartTotal({ value }) {
-  const { cart, cartTotal } = value;
+function CartTotal({ value, history }) {
+  const { cart, cartTotal, clearCart } = value;
   const count = cart.reduce((total, cart) => {
     return total + cart.count;
   }, 0);
@@ -25,6 +26,11 @@ function CartTotal({ value }) {
       <button className="cart-total__checkout-btn">
         <Link className="dark-btn">Checkout</Link>
       </button>
+      <CheckoutButton
+        total={cartTotal}
+        clearCart={clearCart}
+        history={history}
+      />
     </aside>
   );
 }
