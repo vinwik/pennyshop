@@ -15,12 +15,7 @@ export class Product extends Component {
               className="card__img-container"
               onClick={() => value.handleDetail(id)}
             >
-              <Link
-                to={{
-                  pathname: `/shop/${id}`,
-                  state: { products: id }
-                }}
-              >
+              <Link to="/detail">
                 <img src={img} alt={title} className="card__img" />
               </Link>
               <h4 className="card__title">
