@@ -26,7 +26,7 @@ const Collections = () => {
                   </p>
                   <button>
                     <Link
-                      to="/shop"
+                      to="/"
                       className="dark-btn"
                       onClick={() => value.handleTags("Classic")}
                     >
@@ -49,7 +49,7 @@ const Collections = () => {
                   </p>
                   <button>
                     <Link
-                      to="/shop"
+                      to="/"
                       className="dark-btn"
                       onClick={() => value.handleTags("Star Wars")}
                     >

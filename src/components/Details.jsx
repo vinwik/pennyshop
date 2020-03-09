@@ -20,7 +20,7 @@ export class Details extends Component {
           } = value.detailProduct;
           return (
             <div className="details container">
-              <img src={`.${img}`} alt={title} className="details__img" />
+              <img src={img} alt={title} className="details__img" />
               <div className="details__text">
                 <h2 className="details__text-title">{title}</h2>
                 <p className="details__text-category">

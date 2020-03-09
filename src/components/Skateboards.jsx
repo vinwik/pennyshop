@@ -31,7 +31,7 @@ const Skateboards = () => {
                   </p>
                   <button>
                     <Link
-                      to="/shop"
+                      to="/"
                       className="dark-btn"
                       onClick={() => value.handleTags(`22"`)}
                     >
@@ -56,7 +56,7 @@ const Skateboards = () => {
                   </p>
                   <button>
                     <Link
-                      to="/shop"
+                      to="/"
                       className="dark-btn"
                       onClick={() => value.handleTags(`27"`)}
                     >
