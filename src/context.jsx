@@ -173,6 +173,20 @@ class ProductProvider extends Component {
     );
   };
 
+  clearCart = () => {
+    this.setState(
+      () => {
+        return { cart: [] };
+      },
+      () => {
+        localStorage.removeItem("products");
+        localStorage.removeItem("cart");
+        this.setProducts();
+        this.sumTotals();
+      }
+    );
+  };
+
   sumTotals = () => {
     let total = 0;
     this.state.cart.map(item => (total += item.total));
@@ -183,7 +197,12 @@ class ProductProvider extends Component {
         };
       },
       () => {
-        localStorage.setItem("cartTotal", JSON.stringify(this.state.cartTotal));
+        this.state.cartTotal
+          ? localStorage.setItem(
+              "cartTotal",
+              JSON.stringify(this.state.cartTotal)
+            )
+          : localStorage.removeItem("cartTotal");
       }
     );
   };
@@ -200,6 +219,7 @@ class ProductProvider extends Component {
           decrement: this.decrement,
           increment: this.increment,
           removeItem: this.removeItem,
+          clearCart: this.clearCart,
           parseProducts: this.parseProducts,
           parseCart: this.parseCart,
           parseCartTotal: this.parseCartTotal
