@@ -41,7 +41,7 @@ class NavBar extends Component {
                 </li>
                 <li className="navbar__nav-items">
                   <Link
-                    to="/"
+                    to="/shop"
                     className="navbar__nav-links"
                     onClick={() => (value.filteredList = [])}
                   >
