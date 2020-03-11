@@ -60,18 +60,24 @@ $slick-opacity-not-active: 0.25 !default;
 }
 
 /* Arrows */
+.slick-prev,
+.slick-prev:hover,
+.slick-next,
+.slick-next:hover {
+  transition: opacity 0.2s ease-in-out;
+}
 
 .slick-prev,
 .slick-next {
   position: absolute;
   display: block;
-  height: 2rem;
-  width: 2rem;
-  line-height: 0px;
+  height: 3rem;
+  width: 3rem;
+  // line-height: 0px;
   font-size: 0px;
   cursor: pointer;
-  background: transparent;
-  color: transparent;
+  // background: transparent;
+  // color: transparent;
   top: 50%;
   -webkit-transform: translate(0, -50%);
   -ms-transform: translate(0, -50%);
@@ -82,21 +88,21 @@ $slick-opacity-not-active: 0.25 !default;
   z-index: 10;
   &:hover {
     outline: none;
-    background: transparent;
-    color: transparent;
+    // background: transparent;
+    // color: transparent;
     &:before {
-      opacity: $slick-opacity-on-hover;
+      // opacity: $slick-opacity-on-hover;
     }
   }
   &.slick-disabled:before {
-    opacity: $slick-opacity-not-active;
+    // opacity: $slick-opacity-not-active;
   }
   &:before {
     font-family: $slick-font-family;
-    font-size: 2rem;
-    line-height: 1;
+    font-size: 3rem;
+    // line-height: 1;
     color: $slick-arrow-color;
-    opacity: $slick-opacity-default;
+    // opacity: $slick-opacity-default;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
@@ -132,6 +138,11 @@ $slick-opacity-not-active: 0.25 !default;
 
 /* Dots */
 
+// .slick-dots button,
+// .slick-dots button:hover {
+//   transition: opacity 1s ease-in-out;
+// }
+
 .slick-dotted.slick-slider {
   margin-bottom: 30px;
 }
@@ -162,7 +173,8 @@ $slick-opacity-not-active: 0.25 !default;
       outline: none;
       line-height: 0px;
       font-size: 0px;
-      color: transparent;
+      color: $slick-dot-color;
+      // color: transparent;
       cursor: pointer;
       &:hover {
         outline: none;
@@ -181,14 +193,14 @@ $slick-opacity-not-active: 0.25 !default;
         font-size: $slick-dot-size;
         line-height: 16px;
         text-align: center;
-        color: $slick-dot-color;
+        // color: $slick-dot-color;
         opacity: $slick-opacity-not-active;
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
       }
     }
     &.slick-active button:before {
-      color: $slick-dot-color-active;
+      // color: $slick-dot-color;
       opacity: $slick-opacity-default;
     }
   }
