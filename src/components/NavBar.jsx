@@ -7,7 +7,6 @@ import { ReactComponent as Bars } from "../assets/bars.svg";
 import { ReactComponent as Close } from "../assets/times.svg";
 
 import { ProductConsumer } from "../context";
-import OustiderAlerter from "../hooks/useOutsideAlerter";
 
 // import "./NavBar.css";
 
