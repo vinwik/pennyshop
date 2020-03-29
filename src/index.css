@@ -413,10 +413,6 @@ body {
   width: 100%;
 }
 
-.card .card__title:hover {
-  text-decoration: underline;
-}
-
 .card .card__price {
   margin-bottom: 0.5em;
 }
