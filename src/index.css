@@ -837,6 +837,9 @@ section .inner-article > * {
   .cart__row .cart-item .cart-item__counter {
     margin: 1em 0 1em 0;
   }
+  .cart__row .cart-item .cart-item__remove {
+    cursor: pointer;
+  }
   .cart__row .cart-item .cart-item__price {
     display: none;
   }
