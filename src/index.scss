@@ -581,6 +581,7 @@ section {
     .navbar__brand {
       grid-column: 2/3;
       margin: 0 auto;
+      transform: translateX(-20px);
     }
 
     .navbar__menu {
