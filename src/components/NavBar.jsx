@@ -30,35 +30,49 @@ const Menu = props => {
                   />
                   <span className="menu__brand-name">Penny'Shop</span>
                 </Link>
-                <button className="menu__close" onClick={handleClose}>
+                <button className="menu__icon" onClick={handleClose}>
                   <Close height="24px" />
                 </button>
               </div>
               <ul className="menu__nav">
-                <li className="menu__nav-items">
-                  <Link
-                    to="/skateboards"
-                    className="navbar__nav-links"
-                    onClick={handleClose}
-                  >
-                    Skateboards
-                  </Link>
-                </li>
-                <li className="menu__nav-items" onClick={handleClose}>
-                  <Link to="/collections" className="navbar__nav-links">
-                    Collections
-                  </Link>
-                </li>
-                <li className="menu__nav-items">
-                  <Link
-                    to="/shop"
-                    className="menu__nav-links"
-                    onClick={() => (value.filteredList = [])}
-                    onClick={handleClose}
-                  >
-                    Shop
-                  </Link>
-                </li>
+                <div className="menu__nav-upper">
+                  <li className="menu__nav-items">
+                    <Link
+                      to="/skateboards"
+                      className="menu__nav-links"
+                      onClick={handleClose}
+                    >
+                      Skateboards
+                    </Link>
+                  </li>
+                  <li className="menu__nav-items" onClick={handleClose}>
+                    <Link to="/collections" className="menu__nav-links">
+                      Collections
+                    </Link>
+                  </li>
+                  <li className="menu__nav-items">
+                    <Link
+                      to="/shop"
+                      className="menu__nav-links"
+                      onClick={() => (value.filteredList = [])}
+                      onClick={handleClose}
+                    >
+                      Shop
+                    </Link>
+                  </li>
+                </div>
+                <div className="menu__nav-lower">
+                  <li className="menu__nav-items">
+                    <Link
+                      to="/cart"
+                      className="menu__nav-links"
+                      onClick={handleClose}
+                    >
+                      <ShoppingCart height="24px" className="menu__icon" />
+                      <span>Shopping Cart</span>
+                    </Link>
+                  </li>
+                </div>
               </ul>
             </nav>
             <div

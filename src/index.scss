@@ -223,11 +223,6 @@ body {
     box-shadow: 0 0 10px var(--secondary-color);
   }
 
-  .menu__close {
-    position: absolute;
-    left: 7.5%;
-  }
-
   .menu__brand {
     @include flex-row;
     margin: 0 auto;
@@ -247,12 +242,29 @@ body {
   }
 
   .menu__nav {
-    // margin: 2em;
-    .menu__nav-items {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: calc(100vh - 60px);
+
+    .menu__nav-links {
+      display: block;
       padding: 2em;
+    }
+
+    .menu__nav-upper .menu__nav-items {
       border-bottom: 1px solid var(--secondary-color);
     }
+
+    .menu__nav-lower .menu__nav-items {
+      border-top: 1px solid var(--secondary-color);
+    }
   }
+}
+
+.menu__icon {
+  position: absolute;
+  left: 7.5%;
 }
 
 .onblur {

@@ -242,11 +242,6 @@ body {
           box-shadow: 0 0 10px var(--secondary-color);
 }
 
-.menu .menu__close {
-  position: absolute;
-  left: 7.5%;
-}
-
 .menu .menu__brand {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -269,9 +264,36 @@ body {
   margin-left: 0.5em;
 }
 
-.menu .menu__nav .menu__nav-items {
+.menu .menu__nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: calc(100vh - 60px);
+}
+
+.menu .menu__nav .menu__nav-links {
+  display: block;
   padding: 2em;
+}
+
+.menu .menu__nav .menu__nav-upper .menu__nav-items {
   border-bottom: 1px solid var(--secondary-color);
+}
+
+.menu .menu__nav .menu__nav-lower .menu__nav-items {
+  border-top: 1px solid var(--secondary-color);
+}
+
+.menu__icon {
+  position: absolute;
+  left: 7.5%;
 }
 
 .onblur {
