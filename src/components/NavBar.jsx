@@ -7,6 +7,7 @@ import { ReactComponent as Bars } from "../assets/bars.svg";
 import { ReactComponent as Close } from "../assets/times.svg";
 
 import { ProductConsumer } from "../context";
+import OustiderAlerter from "../hooks/useOutsideAlerter";
 
 // import "./NavBar.css";
 
@@ -30,8 +31,12 @@ const Menu = props => {
               </button>
             </div>
             <ul className="menu__nav">
-              <li className="menu__nav-items" onClick={handleClose}>
-                <Link to="/skateboards" className="navbar__nav-links">
+              <li className="menu__nav-items">
+                <Link
+                  to="/skateboards"
+                  className="navbar__nav-links"
+                  onClick={handleClose}
+                >
                   Skateboards
                 </Link>
               </li>
@@ -40,11 +45,12 @@ const Menu = props => {
                   Collections
                 </Link>
               </li>
-              <li className="menu__nav-items" onClick={handleClose}>
+              <li className="menu__nav-items">
                 <Link
                   to="/shop"
                   className="menu__nav-links"
                   onClick={() => (value.filteredList = [])}
+                  onClick={handleClose}
                 >
                   Shop
                 </Link>
@@ -69,7 +75,7 @@ const NavBar = () => {
         }, 0);
 
         return (
-          <nav className="navbar">
+          <nav className="navbar" onBlur={() => setIsVisible(false)}>
             <button className="navbar__menu" onClick={() => setIsVisible(true)}>
               <Bars height="24px" />
             </button>
