@@ -196,6 +196,24 @@ body {
 
   .navbar__cart {
     margin-left: auto;
+
+    .navbar__cart-link {
+      // display: flex;
+      position: relative;
+    }
+
+    div {
+      position: absolute;
+      top: 20%;
+      left: 60%;
+      background-color: var(--main-color);
+      border-radius: 25px;
+      width: 20px;
+      height: 20px;
+      color: #fff;
+      line-height: 20px;
+      font-size: 10px;
+    }
   }
 }
 

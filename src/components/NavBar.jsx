@@ -131,7 +131,7 @@ const NavBar = () => {
             <button className="navbar__cart">
               <Link to="/cart" className="navbar__cart-link">
                 <ShoppingCart height="24px" />
-                <span>{count > 0 ? count : ""}</span>
+                {count > 0 && <div>{count}</div>}
               </Link>
             </button>
           </nav>
