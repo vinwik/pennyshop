@@ -767,7 +767,7 @@ section .inner-article > * {
   .menu {
     width: 100%;
   }
-  .menu .menu__close {
+  .menu .menu__icon {
     left: 5%;
   }
   .onblur {
