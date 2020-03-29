@@ -23,9 +23,9 @@ function CartTotal({ value, history }) {
         <h4 className="total-title">Total</h4>
         <h4 className="total-amount">£{cartTotal.toFixed(2)}</h4>
       </div>
-      <button className="cart-total__checkout-btn">
+      {/* <button className="cart-total__checkout-btn">
         <Link className="dark-btn">Checkout</Link>
-      </button>
+      </button> */}
       <CheckoutButton
         total={cartTotal}
         clearCart={clearCart}
