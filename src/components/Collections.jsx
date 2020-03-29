@@ -41,11 +41,8 @@ const Collections = () => {
                   <p>
                     Not so long ago… in a skatepark not so far away… Penny
                     Skateboards and Star Wars combined forces to bring the
-                    galaxy a collaboration like none before it. You can roll on
-                    the dark side with Darth Vader and his loyal army of
-                    Stormtroopers; or you could side with the Rebels and hop on
-                    R2-D2. You don’t like to pick sides? Blast off with Boba
-                    Fett. Ride safe young padawans!
+                    galaxy a collaboration like none before it. Ride safe young
+                    padawans!
                   </p>
                   <button>
                     <Link
