@@ -490,6 +490,10 @@ body {
         margin: 0 1em;
       }
     }
+
+    .cart-item__remove {
+      cursor: pointer;
+    }
   }
 
   .cart-total {
@@ -724,10 +728,6 @@ section {
 
       .cart-item__counter {
         margin: 1em 0 1em 0;
-      }
-
-      .cart-item__remove {
-        cursor: pointer;
       }
 
       .cart-item__price {
