@@ -255,6 +255,17 @@ body {
   }
 }
 
+.onblur {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 30%;
+  height: 100%;
+  z-index: 100;
+  transform: translateX(105%);
+  transition: transform 0.2s ease-in-out;
+}
+
 .visible {
   transform: translateX(0);
 }
@@ -620,6 +631,10 @@ section {
     .menu__close {
       left: 5%;
     }
+  }
+
+  .onblur {
+    display: none;
   }
 
   .product {
