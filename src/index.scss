@@ -686,9 +686,13 @@ section {
       grid-template-columns: 1fr 1fr;
       grid-template-rows: auto auto auto auto;
       padding-bottom: 1em;
-      border-bottom: 1px solid black;
+      border-bottom: 1px solid var(--secondary-color);
       width: 90%;
       margin: 1em auto;
+
+      &:last-child {
+        border: none;
+      }
 
       .cart-item__product-details {
         margin-right: 0;

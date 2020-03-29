@@ -814,9 +814,12 @@ section .inner-article > * {
     -ms-grid-rows: auto auto auto auto;
         grid-template-rows: auto auto auto auto;
     padding-bottom: 1em;
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid var(--secondary-color);
     width: 90%;
     margin: 1em auto;
+  }
+  .cart__row .cart-item:last-child {
+    border: none;
   }
   .cart__row .cart-item .cart-item__product-details {
     margin-right: 0;
