@@ -2,7 +2,8 @@ export const storeProducts = [
   {
     id: 1,
     title: `Darth Vader 22"`,
-    img: "./assets/vader-22.jpg",
+    img: "./assets/small/vader-22.jpg",
+    imgLarge: "./assets/vader-22.jpg",
     size: `22"`,
     price: 89.99,
     collection: "Star Wars",
@@ -16,7 +17,8 @@ export const storeProducts = [
   {
     id: 2,
     title: `Ice 22"`,
-    img: "./assets/ice-22.jpg",
+    img: "./assets/small/ice-22.jpg",
+    imgLarge: "./assets/ice-22.jpg",
     size: `22"`,
     price: 89.99,
     collection: "Classic",
@@ -30,7 +32,8 @@ export const storeProducts = [
   {
     id: 3,
     title: `Darth Vader 27"`,
-    img: "./assets/vader-27.jpg",
+    img: "./assets/small/vader-27.jpg",
+    imgLarge: "./assets/vader-27.jpg",
     size: `27"`,
     price: 99.99,
     collection: "Star Wars",
@@ -44,7 +47,8 @@ export const storeProducts = [
   {
     id: 4,
     title: `Ice 27"`,
-    img: "./assets/ice-27.jpg",
+    img: "./assets/small/ice-27.jpg",
+    imgLarge: "./assets/ice-27.jpg",
     size: `27"`,
     price: 99.99,
     collection: "Classic",
@@ -58,7 +62,8 @@ export const storeProducts = [
   {
     id: 5,
     title: `Darth Vader 22"`,
-    img: "./assets/vader-22.jpg",
+    img: "./assets/small/vader-22.jpg",
+    imgLarge: "./assets/vader-22.jpg",
     size: `22"`,
     price: 89.99,
     collection: "Star Wars",
@@ -72,7 +77,8 @@ export const storeProducts = [
   {
     id: 6,
     title: `Ice 22"`,
-    img: "./assets/ice-22.jpg",
+    img: "./assets/small/ice-22.jpg",
+    imgLarge: "./assets/ice-22.jpg",
     size: `22"`,
     price: 89.99,
     collection: "Classic",
@@ -86,7 +92,8 @@ export const storeProducts = [
   {
     id: 7,
     title: `Darth Vader 27"`,
-    img: "./assets/vader-27.jpg",
+    img: "./assets/small/vader-27.jpg",
+    imgLarge: "./assets/vader-27.jpg",
     size: `27"`,
     price: 99.99,
     collection: "Star Wars",
@@ -100,7 +107,8 @@ export const storeProducts = [
   {
     id: 8,
     title: `Ice 27"`,
-    img: "./assets/ice-27.jpg",
+    img: "./assets/small/ice-27.jpg",
+    imgLarge: "./assets/ice-27.jpg",
     size: `27"`,
     price: 99.99,
     collection: "Classic",
@@ -116,7 +124,8 @@ export const storeProducts = [
 export const detailProduct = {
   id: 1,
   title: `Darth Vader 22"`,
-  img: "./assets/vader-22.jpg",
+  img: "./assets/small/vader-22.jpg",
+  imgLarge: "./assets/vader-22.jpg",
   size: `22"`,
   price: 89.99,
   collection: "Star Wars",
