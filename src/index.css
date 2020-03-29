@@ -492,8 +492,8 @@ body {
   grid-row: 1/2;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 2fr 1fr 1fr 1fr;
-      grid-template-columns: 2fr 1fr 1fr 1fr;
+  -ms-grid-columns: 3fr 1fr 1fr 1fr;
+      grid-template-columns: 3fr 1fr 1fr 1fr;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -512,8 +512,8 @@ body {
 .cart__row .cart-item {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 2fr 1fr 1fr 1fr;
-      grid-template-columns: 2fr 1fr 1fr 1fr;
+  -ms-grid-columns: 3fr 1fr 1fr 1fr;
+      grid-template-columns: 3fr 1fr 1fr 1fr;
   margin-bottom: 2em;
 }
 
@@ -561,13 +561,13 @@ body {
 
 .cart__row .cart-item .cart-item__counter .counter-decrement,
 .cart__row .cart-item .cart-item__counter .counter-increment {
-  height: 2em;
-  width: 2em;
+  height: 1.2em;
+  width: 1.2em;
 }
 
 .cart__row .cart-item .cart-item__counter .counter-decrement svg,
 .cart__row .cart-item .cart-item__counter .counter-increment svg {
-  height: 2em;
+  height: 1.2em;
 }
 
 .cart__row .cart-item .cart-item__counter .counter-amount {
@@ -779,7 +779,7 @@ section .inner-article > * {
   }
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 600px) {
   body {
     font-size: 14px;
   }
