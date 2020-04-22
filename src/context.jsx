@@ -12,7 +12,7 @@ class ProductProvider extends Component {
     detailProduct: detailProduct,
     filteredList: [],
     cart: [],
-    cartTotal: 0
+    cartTotal: 0,
   };
 
   componentDidMount() {
@@ -24,7 +24,7 @@ class ProductProvider extends Component {
 
   setProducts = () => {
     let products = [];
-    storeProducts.forEach(item => {
+    storeProducts.forEach((item) => {
       const singleItem = { ...item };
       products = [...products, singleItem];
     });
@@ -33,26 +33,26 @@ class ProductProvider extends Component {
     });
   };
 
-  getItem = id => {
-    const product = this.state.products.find(item => item.id === id);
+  getItem = (id) => {
+    const product = this.state.products.find((item) => item.id === id);
     return product;
   };
 
-  handleDetail = id => {
+  handleDetail = (id) => {
     const product = this.getItem(id);
     this.setState(() => {
       return { detailProduct: product };
     });
   };
 
-  getTags = tags => {
+  getTags = (tags) => {
     const tag = this.state.products.filter(
-      product => product.tags.indexOf(tags) >= 0
+      (product) => product.tags.indexOf(tags) >= 0
     );
     return tag;
   };
 
-  handleTags = tags => {
+  handleTags = (tags) => {
     const tag = this.getTags(tags);
 
     this.setState(() => {
@@ -60,7 +60,7 @@ class ProductProvider extends Component {
     });
   };
 
-  addToCart = id => {
+  addToCart = (id) => {
     let products = [...this.state.products];
     const index = products.indexOf(this.getItem(id));
     const product = products[index];
@@ -73,23 +73,25 @@ class ProductProvider extends Component {
         return { products, cart: [...this.state.cart, product] };
       },
       () => {
-        localStorage.setItem("products", JSON.stringify(this.state.products));
-        localStorage.setItem("cart", JSON.stringify(this.state.cart));
+        sessionStorage.setItem("products", JSON.stringify(this.state.products));
+        sessionStorage.setItem("cart", JSON.stringify(this.state.cart));
         this.sumTotals();
       }
     );
   };
 
   parseProducts = () => {
-    const json = localStorage.getItem("products");
+    const json = sessionStorage.getItem("products");
     if (json != null) {
       const products = JSON.parse(json);
-      this.setState({ products });
+      this.setState(() => {
+        return { products };
+      });
     }
   };
 
   parseCart = () => {
-    const json = localStorage.getItem("cart");
+    const json = sessionStorage.getItem("cart");
     if (json != null) {
       const cart = JSON.parse(json);
       this.setState({ cart });
@@ -97,16 +99,16 @@ class ProductProvider extends Component {
   };
 
   parseCartTotal = () => {
-    const json = localStorage.getItem("cartTotal");
+    const json = sessionStorage.getItem("cartTotal");
     if (json != null) {
       const cartTotal = JSON.parse(json);
       this.setState({ cartTotal });
     }
   };
 
-  increment = id => {
+  increment = (id) => {
     let cart = [...this.state.cart];
-    const selectedProduct = cart.find(item => item.id === id);
+    const selectedProduct = cart.find((item) => item.id === id);
 
     const index = cart.indexOf(selectedProduct);
     const product = cart[index];
@@ -119,15 +121,15 @@ class ProductProvider extends Component {
         return { cart };
       },
       () => {
-        localStorage.setItem("cart", JSON.stringify(this.state.cart));
+        sessionStorage.setItem("cart", JSON.stringify(this.state.cart));
         this.sumTotals();
       }
     );
   };
 
-  decrement = id => {
+  decrement = (id) => {
     let cart = [...this.state.cart];
-    const selectedProduct = cart.find(item => item.id === id);
+    const selectedProduct = cart.find((item) => item.id === id);
 
     const index = cart.indexOf(selectedProduct);
     const product = cart[index];
@@ -142,17 +144,17 @@ class ProductProvider extends Component {
         return { cart };
       },
       () => {
-        localStorage.setItem("cart", JSON.stringify(this.state.cart));
+        sessionStorage.setItem("cart", JSON.stringify(this.state.cart));
         this.sumTotals();
       }
     );
   };
 
-  removeItem = id => {
+  removeItem = (id) => {
     let products = [...this.state.products];
     let cart = [...this.state.cart];
 
-    cart = cart.filter(item => item.id !== id);
+    cart = cart.filter((item) => item.id !== id);
 
     const index = products.indexOf(this.getItem(id));
     let removedProduct = products[index];
@@ -166,8 +168,8 @@ class ProductProvider extends Component {
         return { products, cart };
       },
       () => {
-        localStorage.setItem("products", JSON.stringify(this.state.products));
-        localStorage.setItem("cart", JSON.stringify(this.state.cart));
+        sessionStorage.setItem("products", JSON.stringify(this.state.products));
+        sessionStorage.setItem("cart", JSON.stringify(this.state.cart));
         this.sumTotals();
       }
     );
@@ -179,8 +181,8 @@ class ProductProvider extends Component {
         return { cart: [] };
       },
       () => {
-        localStorage.removeItem("products");
-        localStorage.removeItem("cart");
+        sessionStorage.removeItem("products");
+        sessionStorage.removeItem("cart");
         this.setProducts();
         this.sumTotals();
       }
@@ -189,20 +191,20 @@ class ProductProvider extends Component {
 
   sumTotals = () => {
     let total = 0;
-    this.state.cart.map(item => (total += item.total));
+    this.state.cart.map((item) => (total += item.total));
     this.setState(
       () => {
         return {
-          cartTotal: total
+          cartTotal: total,
         };
       },
       () => {
         this.state.cartTotal
-          ? localStorage.setItem(
+          ? sessionStorage.setItem(
               "cartTotal",
               JSON.stringify(this.state.cartTotal)
             )
-          : localStorage.removeItem("cartTotal");
+          : sessionStorage.removeItem("cartTotal");
       }
     );
   };
@@ -222,7 +224,7 @@ class ProductProvider extends Component {
           clearCart: this.clearCart,
           parseProducts: this.parseProducts,
           parseCart: this.parseCart,
-          parseCartTotal: this.parseCartTotal
+          parseCartTotal: this.parseCartTotal,
         }}
       >
         {this.props.children}
