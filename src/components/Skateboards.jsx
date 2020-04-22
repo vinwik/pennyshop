@@ -7,7 +7,7 @@ import { ProductConsumer } from "../context";
 const Skateboards = () => {
   return (
     <ProductConsumer>
-      {value => {
+      {(value) => {
         const size = value.products.size;
         return (
           <section className="skateboards">
@@ -26,7 +26,7 @@ const Skateboards = () => {
                   </p>
                   <button>
                     <Link
-                      to="/"
+                      to="/shop"
                       className="dark-btn"
                       onClick={() => value.handleTags(`22"`)}
                     >
@@ -47,7 +47,7 @@ const Skateboards = () => {
                   </p>
                   <button>
                     <Link
-                      to="/"
+                      to="/shop"
                       className="dark-btn"
                       onClick={() => value.handleTags(`27"`)}
                     >

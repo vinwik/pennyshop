@@ -7,7 +7,7 @@ import Product from "./Product";
 const Collections = () => {
   return (
     <ProductConsumer>
-      {value => {
+      {(value) => {
         const tags = value.products.tags;
         return (
           <section className="collections">
@@ -26,7 +26,7 @@ const Collections = () => {
                   </p>
                   <button>
                     <Link
-                      to="/"
+                      to="/shop"
                       className="dark-btn"
                       onClick={() => value.handleTags("Classic")}
                     >
@@ -46,7 +46,7 @@ const Collections = () => {
                   </p>
                   <button>
                     <Link
-                      to="/"
+                      to="/shop"
                       className="dark-btn"
                       onClick={() => value.handleTags("Star Wars")}
                     >
