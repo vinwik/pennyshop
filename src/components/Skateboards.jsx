@@ -15,8 +15,9 @@ const Skateboards = () => {
               <Title title="Skateboards" />
             </header>
             <div className="container">
-              <article className="penny">
-                <div className="inner-article">
+              <div className="card-large">
+                <div className="card-large__img-container penny"></div>
+                <div className="card-large__description">
                   <h3>22" PENNY SKATEBOARD</h3>
                   <p>
                     The first and original 22” Penny Skateboard is a quick and
@@ -34,9 +35,10 @@ const Skateboards = () => {
                     </Link>
                   </button>
                 </div>
-              </article>
-              <article className="nickel">
-                <div className="inner-article">
+              </div>
+              <div className="card-large">
+                <div className="card-large__img-container nickel"></div>
+                <div className="card-large__description">
                   <h3>27" PENNY SKATEBOARD</h3>
                   <p>
                     For those who like a little more plastic under their feet,
@@ -55,7 +57,7 @@ const Skateboards = () => {
                     </Link>
                   </button>
                 </div>
-              </article>
+              </div>
             </div>
           </section>
         );

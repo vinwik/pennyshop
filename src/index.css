@@ -119,7 +119,7 @@ section {
 
 /*--- BODY ---*/
 body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: var(--main-bg-color);
@@ -673,22 +673,25 @@ section header {
   text-shadow: 0 0 10px var(--main-color);
 }
 
-section article {
+section .card-large {
+  margin: 2em;
+}
+
+section .card-large .card-large__img-container {
   height: 50vh;
-  margin: 4em 4em 20vh 4em;
-  position: relative;
 }
 
-section .inner-article {
+section .card-large .card-large__description {
   background-color: var(--main-bg-color);
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  -webkit-transform: translate(-50%, 50%);
-          transform: translate(-50%, 50%);
+  width: 60%;
+  margin: 0 auto;
+  padding: 0.5em;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  margin-bottom: -10%;
 }
 
-section .inner-article > * {
+section .card-large .card-large__description > * {
   margin: 1em;
 }
 
@@ -748,7 +751,7 @@ section .inner-article > * {
 
 .default h1,
 .default h3 {
-  text-shadow: -2px -2px 0 #222, 0px -2px 0 #222, 2px -2px 0 #222, -2px 2px 0 #222, 0px 2px 0 #222, 2px 2px 0 #222;
+  text-shadow: -2px -2px 0 #222, 0px -2px 0 #222, 2px -2px 0 #222, -2px 2px 0 #222, 0px 2px 0 #222, 2px 2px 0 #222;
 }
 
 .default h3 {
@@ -806,15 +809,18 @@ section .inner-article > * {
     height: 40vh;
     margin-bottom: 2em;
   }
-  section article {
-    margin: 2em 1em 15vh 1em;
+  section .card-large {
+    margin: 2em;
   }
-  section .inner-article {
-    width: 60%;
+  section .card-large .card-large__img-container {
+    height: 50vh;
+  }
+  section .card-large .card-large__description {
+    width: 80%;
   }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 900px) and (max-width: 600px) {
   body {
     font-size: 14px;
   }
@@ -907,26 +913,18 @@ section .inner-article > * {
     height: 40vh;
     margin-bottom: 2em;
   }
-  section article {
-    margin: 0 0 calc(25vh + 2em) 0;
+  section .card-large {
+    margin: 0 0 2em 0;
   }
-  section .inner-article {
-    background-color: var(--main-bg-color);
+  section .card-large .card-large__img-container {
+    height: 30vh;
+  }
+  section .card-large .card-large__description {
     width: 100%;
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    -webkit-transform: translate(-50%, 100%);
-            transform: translate(-50%, 100%);
-  }
-  section .inner-article > * {
-    margin: 1em;
-  }
-}
-
-@media screen and (min-width: 900px) and (orientation: portrait) {
-  section article {
-    margin: 4em 4em 15vh 4em;
+    padding: 0;
+    -webkit-transform: unset;
+            transform: unset;
+    margin-bottom: 0;
   }
 }
 /*# sourceMappingURL=index.css.map */

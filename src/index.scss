@@ -530,20 +530,22 @@ section {
     font-size: 2em;
     text-shadow: 0 0 10px var(--main-color);
   }
-  article {
-    height: 50vh;
-    margin: 4em 4em 20vh 4em;
-    position: relative;
-  }
 
-  .inner-article {
-    background-color: var(--main-bg-color);
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translate(-50%, 50%);
-    & > * {
-      margin: 1em;
+  .card-large {
+    margin: 2em;
+    .card-large__img-container {
+      height: 50vh;
+    }
+    .card-large__description {
+      background-color: var(--main-bg-color);
+      width: 60%;
+      margin: 0 auto;
+      padding: 0.5em;
+      transform: translateY(-50%);
+      margin-bottom: -10%;
+      & > * {
+        margin: 1em;
+      }
     }
   }
 }
@@ -665,120 +667,111 @@ section {
   }
 
   section {
-    article {
-      margin: 2em 1em 15vh 1em;
-    }
-
-    .inner-article {
-      width: 60%;
-    }
-  }
-}
-
-@media screen and (max-width: 600px) {
-  body {
-    font-size: 14px;
-  }
-
-  .menu {
-    width: 100%;
-    .menu__icon {
-      left: 5%;
+    .card-large {
+      margin: 2em;
+      .card-large__img-container {
+        height: 50vh;
+      }
+      .card-large__description {
+        width: 80%;
+      }
     }
   }
 
-  .onblur {
-    display: none;
-  }
+  @media screen and (max-width: 600px) {
+    body {
+      font-size: 14px;
+    }
 
-  .product {
-    grid-template-columns: 1fr;
-  }
+    .menu {
+      width: 100%;
+      .menu__icon {
+        left: 5%;
+      }
+    }
 
-  .cart__row {
-    grid-template-columns: 1fr;
-    grid-template-rows: auto auto;
-    position: relative;
-
-    .cart-columns {
+    .onblur {
       display: none;
     }
 
-    .cart-item {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      grid-template-rows: auto auto auto auto;
-      padding-bottom: 1em;
-      border-bottom: 1px solid var(--secondary-color);
-      width: 90%;
-      margin: 1em auto;
+    .product {
+      grid-template-columns: 1fr;
+    }
 
-      &:last-child {
-        border: none;
-      }
+    .cart__row {
+      grid-template-columns: 1fr;
+      grid-template-rows: auto auto;
+      position: relative;
 
-      .cart-item__product-details {
-        margin-right: 0;
-        @include flex-column();
-      }
-
-      .cart-item__counter {
-        margin: 1em 0 1em 0;
-      }
-
-      .cart-item__price {
+      .cart-columns {
         display: none;
       }
 
+      .cart-item {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto auto auto;
+        padding-bottom: 1em;
+        border-bottom: 1px solid var(--secondary-color);
+        width: 90%;
+        margin: 1em auto;
+
+        &:last-child {
+          border: none;
+        }
+
+        .cart-item__product-details {
+          margin-right: 0;
+          @include flex-column();
+        }
+
+        .cart-item__counter {
+          margin: 1em 0 1em 0;
+        }
+
+        .cart-item__price {
+          display: none;
+        }
+
+        .cart-item__total {
+          grid-column: 2/3;
+        }
+
+        .cart-item__total::before {
+          content: "Total : ";
+          white-space: pre;
+        }
+      }
+
+      .cart-item__product-details,
+      .cart-item__quantity,
+      .cart-item__price,
       .cart-item__total {
-        grid-column: 2/3;
+        @include flex-row();
+        justify-content: center;
       }
 
-      .cart-item__total::before {
-        content: "Total : ";
-        white-space: pre;
+      .cart-total {
+        grid-column: 1/1;
+        grid-row: 3/4;
+        height: 40vh;
+        margin-bottom: 2em;
       }
     }
 
-    .cart-item__product-details,
-    .cart-item__quantity,
-    .cart-item__price,
-    .cart-item__total {
-      @include flex-row();
-      justify-content: center;
-    }
-
-    .cart-total {
-      grid-column: 1/1;
-      grid-row: 3/4;
-      height: 40vh;
-      margin-bottom: 2em;
-    }
-  }
-
-  section {
-    article {
-      margin: 0 0 calc(25vh + 2em) 0;
-    }
-
-    .inner-article {
-      background-color: var(--main-bg-color);
-      width: 100%;
-      position: absolute;
-      bottom: 0;
-      left: 50%;
-      transform: translate(-50%, 100%);
-      & > * {
-        margin: 1em;
+    section {
+      .card-large {
+        margin: 0 0 2em 0;
+        .card-large__img-container {
+          height: 30vh;
+        }
+        .card-large__description {
+          width: 100%;
+          padding: 0;
+          transform: unset;
+          margin-bottom: 0;
+        }
       }
-    }
-  }
-}
-
-@media screen and (min-width: 900px) and (orientation: portrait) {
-  section {
-    article {
-      margin: 4em 4em 15vh 4em;
     }
   }
 }

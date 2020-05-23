@@ -15,8 +15,9 @@ const Collections = () => {
               <Title title="Collections" />
             </header>
             <div className="container">
-              <article className="classic">
-                <div className="inner-article">
+              <div className="card-large">
+                <div className="card-large__img-container classic"></div>
+                <div className="card-large__description">
                   <h3>CLASSIC</h3>
                   <p>
                     Distinguished by its plastic deck, the Classic Penny
@@ -34,9 +35,10 @@ const Collections = () => {
                     </Link>
                   </button>
                 </div>
-              </article>
-              <article className="star-wars">
-                <div className="inner-article">
+              </div>
+              <div className="card-large">
+                <div className="card-large__img-container star-wars"></div>
+                <div className="card-large__description">
                   <h3>STAR WARS COLLECTION</h3>
                   <p>
                     Not so long ago… in a skatepark not so far away… Penny
@@ -54,7 +56,7 @@ const Collections = () => {
                     </Link>
                   </button>
                 </div>
-              </article>
+              </div>
             </div>
           </section>
         );
