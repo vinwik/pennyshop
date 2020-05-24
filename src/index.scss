@@ -694,6 +694,35 @@ section {
       display: none;
     }
 
+    .details {
+      grid-template-columns: 1fr;
+
+      .details__img {
+        width: 90%;
+        margin: 0 auto;
+        margin-bottom: 1em;
+      }
+
+      .details__text {
+        align-items: center;
+      }
+
+      .card__btn {
+        width: 100%;
+        @include flex-row();
+        justify-content: center;
+        line-height: 1.6;
+        font-size: 1.2em;
+      }
+
+      .details__text-description {
+        margin-top: 1.2em;
+        margin-bottom: 0.5em;
+        padding-bottom: 0.5em;
+        border-bottom: 1px solid black;
+      }
+    }
+
     .cart__row {
       grid-template-columns: 1fr;
       grid-template-rows: auto auto;

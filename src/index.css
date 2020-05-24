@@ -833,6 +833,40 @@ section .card-large .card-large__description > * {
   .onblur {
     display: none;
   }
+  .details {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+  .details .details__img {
+    width: 90%;
+    margin: 0 auto;
+    margin-bottom: 1em;
+  }
+  .details .details__text {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .details .card__btn {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    line-height: 1.6;
+    font-size: 1.2em;
+  }
+  .details .details__text-description {
+    margin-top: 1.2em;
+    margin-bottom: 0.5em;
+    padding-bottom: 0.5em;
+    border-bottom: 1px solid black;
+  }
   .cart__row {
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
