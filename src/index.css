@@ -823,6 +823,7 @@ section .card-large .card-large__description > * {
     -ms-grid-row-span: 1;
     grid-row: 3/4;
     height: 20vh;
+    min-height: 190px;
     width: 50%;
     margin-left: auto;
     margin-bottom: 2em;
