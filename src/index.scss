@@ -661,7 +661,9 @@ section {
     .cart-total {
       grid-column: 1/1;
       grid-row: 3/4;
-      height: 40vh;
+      height: 20vh;
+      width: 50%;
+      margin-left: auto;
       margin-bottom: 2em;
     }
   }
@@ -779,8 +781,9 @@ section {
       .cart-total {
         grid-column: 1/1;
         grid-row: 3/4;
-        height: 40vh;
-        margin-bottom: 2em;
+        height: 30vh;
+        width: 100%;
+        margin: 0 0 2em 0;
       }
     }
 

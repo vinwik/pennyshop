@@ -809,7 +809,9 @@ section .card-large .card-large__description > * {
     -ms-grid-row: 3;
     -ms-grid-row-span: 1;
     grid-row: 3/4;
-    height: 40vh;
+    height: 20vh;
+    width: 50%;
+    margin-left: auto;
     margin-bottom: 2em;
   }
   section .card-large {
@@ -943,8 +945,9 @@ section .card-large .card-large__description > * {
     -ms-grid-row: 3;
     -ms-grid-row-span: 1;
     grid-row: 3/4;
-    height: 40vh;
-    margin-bottom: 2em;
+    height: 30vh;
+    width: 100%;
+    margin: 0 0 2em 0;
   }
   section .card-large {
     margin: 0 0 2em 0;
