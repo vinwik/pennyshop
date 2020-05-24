@@ -833,10 +833,6 @@ section .card-large .card-large__description > * {
   .onblur {
     display: none;
   }
-  .product {
-    -ms-grid-columns: 1fr;
-        grid-template-columns: 1fr;
-  }
   .cart__row {
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
