@@ -793,6 +793,9 @@ section .card-large .card-large__description > * {
     -ms-grid-columns: 1fr 1fr;
         grid-template-columns: 1fr 1fr;
   }
+  .details {
+    margin-top: 60px;
+  }
   .cart__row {
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
