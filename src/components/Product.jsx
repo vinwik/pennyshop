@@ -9,13 +9,13 @@ export class Product extends Component {
     const { id, title, img, price, inCart } = this.props.product;
     return (
       <ProductConsumer>
-        {value => (
+        {(value) => (
           <div className="card">
             <div
               className="card__img-container"
               onClick={() => value.handleDetail(id)}
             >
-              <Link to="/detail">
+              <Link to="/details">
                 <img src={img} alt={title} className="card__img" />
               </Link>
               <h4 className="card__title">
