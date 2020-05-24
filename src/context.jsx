@@ -18,6 +18,7 @@ class ProductProvider extends Component {
   componentDidMount() {
     this.setProducts();
     this.parseProducts();
+    this.handleDetail();
     this.parseCart();
     this.parseCartTotal();
   }
@@ -39,10 +40,36 @@ class ProductProvider extends Component {
   };
 
   handleDetail = (id) => {
-    const product = this.getItem(id);
-    this.setState(() => {
-      return { detailProduct: product };
-    });
+    if (id) {
+      const product = this.getItem(id);
+      this.setState(
+        () => {
+          return { detailProduct: product };
+        },
+        () => {
+          sessionStorage.setItem(
+            "details",
+            JSON.stringify(this.state.detailProduct)
+          );
+        }
+      );
+    } else {
+      const json = sessionStorage.getItem("details");
+      if (json != null) {
+        const details = JSON.parse(json);
+        this.setState(
+          () => {
+            return { detailProduct: details };
+          },
+          () => {
+            sessionStorage.setItem(
+              "details",
+              JSON.stringify(this.state.detailProduct)
+            );
+          }
+        );
+      }
+    }
   };
 
   getTags = (tags) => {
