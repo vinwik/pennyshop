@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Switch, Route } from "react-router-dom";
+import ScrollIntoView from "./ScrollIntoView";
 
 import NavBar from "./components/NavBar";
 import Home from "./components/Home";
@@ -17,15 +18,17 @@ class App extends Component {
     return (
       <React.Fragment>
         <NavBar />
-        <Switch>
-          <Route exact path="/" component={Home} />
-          <Route path="/shop" component={ProductList} />
-          <Route path="/skateboards" component={Skateboards} />
-          <Route path="/collections" component={Collections} />
-          <Route path="/details" component={Details} />
-          <Route path="/cart" component={Cart} />
-          <Route component={Default} />
-        </Switch>
+        <ScrollIntoView>
+          <Switch>
+            <Route exact path="/" component={Home} />
+            <Route path="/shop" component={ProductList} />
+            <Route path="/skateboards" component={Skateboards} />
+            <Route path="/collections" component={Collections} />
+            <Route path="/details" component={Details} />
+            <Route path="/cart" component={Cart} />
+            <Route component={Default} />
+          </Switch>
+        </ScrollIntoView>
       </React.Fragment>
     );
   }
